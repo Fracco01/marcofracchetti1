@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco Fracchetti</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/Style 1.css">
+</head>
+<body>
+    <!-- HEADER CON NAVIGAZIONE -->
+    <header>
+        <a href="#" class="logo">
+            <span class="full-name">marco fracchetti</span>
+        </a>
+        <div class="page-title">Homepage</div>
+        <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- VIDEO FULLSCREEN -->
+    <section class="video-container">
+        <video autoplay muted loop playsinline>
+            <source src="../video/Showreel.mp4" type="video/mp4">
+            Il tuo browser non supporta i video.
+        </video>
+        <div class="video-overlay">
+            <h1>Benvenuto</h1>
+            <h2>Sito di Marco Fracchetti</h2>
+        </div>
+    </section>
+
+    <!-- CONTENUTO PRINCIPALE -->
+    <main class="descrip">
+        <section class="section1">
+            <h2>Chi Sono</h2>
+            <div id="description-paragraph">
+                <h3>
+                    Sono Marco Fracchetti, un graphic designer laureando alla Trentoo Artm Academy di Trento. 
+                    Qui vedrete i miei lavori dove nascono progetti di comunicazione dal carattere umano e autentico. 
+                    Unisco la sensibilità di un freelance alla visione di un'agenzia, creando esperienze su misura: 
+                    dai lavori personali ai progetti industriali. Ogni idea è costruita con gusto, cura e passione — 
+                    perché ogni storia merita di essere raccontata bene.
+                </h3>
+            </div>
+        </section>
+    </main>
+
+    <!-- Script per l'effetto hover sulle parole -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function applyWordHoverEffect(elementId) {
+                const element = document.getElementById(elementId);
+                if (!element) return;
+                
+                const originalText = element.textContent;
+                const wordsAndSpaces = originalText.match(/\w+|[^\w\s]|\s+/g);
+                if (!wordsAndSpaces) return;
+                
+                const transformedContent = wordsAndSpaces.map(item => {
+                    return /^\w+$/.test(item) 
+                        ? `<span class="word-hover">${item}</span>` 
+                        : item;
+                }).join('');
+                
+                // Preserva il tag h3 ma sostituisce il contenuto
+                const h3Element = element.querySelector('h3');
+                if (h3Element) {
+                    h3Element.innerHTML = transformedContent;
+                } else {
+                    element.innerHTML = transformedContent;
+                }
+            }
+            
+            // Applica l'effetto hover al contenuto dell'h3
+            applyWordHoverEffect('description-paragraph');
+        });
+    </script>
+
+    <!-- Card per mostrare i lavori principali -->
+    <main class="content">
+        <h2>I miei lavori</h2>
+        <div class="table-container">
+            <table class="centered-table">
+                <!-- Riga 1 -->
+                <tr>
+                    <!-- Progetto 1 -->
+                    <td>
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Img/1.png" class="card-img-top" alt="Progetto 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Mereihe</h5>
+                                <p class="card-text">Realizzazione di un'opera in cartone per il Merano Wine Festival 2025</p>
+                                <a href="#" class="btn btn-primary">Scopri il progetto</a>
+                            </div>
+                        </div>        
+                    </td>
+                    <!-- Progetto 2 -->
+                    <td>
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Img/1.png" class="card-img-top" alt="Progetto 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Mereihe</h5>
+                                <p class="card-text">Realizzazione di un'opera in cartone per il Merano Wine Festival 2025</p>
+                                <a href="#" class="btn btn-primary">Scopri il progetto</a>
+                            </div>
+                        </div>        
+                    </td>
+                </tr>
+
+                <!-- Riga 2 -->
+                <tr>
+                    <!-- Progetto 3 -->
+                    <td>
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Img/1.png" class="card-img-top" alt="Progetto 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Mereihe</h5>
+                                <p class="card-text">Realizzazione di un'opera in cartone per il Merano Wine Festival 2025</p>
+                                <a href="#" class="btn btn-primary">Scopri il progetto</a>
+                            </div>
+                        </div>        
+                    </td>
+                    <!-- Progetto 4 -->
+                    <td>
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Img/1.png" class="card-img-top" alt="Progetto 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Mereihe</h5>
+                                <p class="card-text">Realizzazione di un'opera in cartone per il Merano Wine Festival 2025</p>
+                                <a href="#" class="btn btn-primary">Scopri il progetto</a>
+                            </div>
+                        </div>        
+                    </td>
+                </tr>
+
+                <!-- Riga 3 -->
+                <tr>
+                    <!-- Progetto 5 -->
+                    <td>
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Img/1.png" class="card-img-top" alt="Progetto 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Mereihe</h5>
+                                <p class="card-text">Realizzazione di un'opera in cartone per il Merano Wine Festival 2025</p>
+                                <a href="#" class="btn btn-primary">Scopri il progetto</a>
+                            </div>
+                        </div>        
+                    </td>
+                    <!-- Progetto 6 -->
+                    <td>
+                        <div class="card" style="width: 18rem;">
+                            <img src="../Img/1.png" class="card-img-top" alt="Progetto 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Mereihe</h5>
+                                <p class="card-text">Realizzazione di un'opera in cartone per il Merano Wine Festival 2025</p>
+                                <a href="#" class="btn btn-primary">Scopri il progetto</a>
+                            </div>
+                        </div>        
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <!-- Form di contatto -->
+    <main class="content">
+        <section class="form-container">
+            <form id="contact-form">
+                <div class="form-header">
+                    <h2>PARLACI DELLA<br>TUA IDEA</h2>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">NOME:</label>
+                    <input type="text" id="name" name="name" placeholder="Inserisci il tuo nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">EMAIL:</label>
+                    <input type="email" id="email" name="email" placeholder="Inserisci la tua email">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">MESSAGGIO</label>
+                    <textarea id="message" name="message" placeholder="Scrivi il tuo messaggio:"></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">
+                        Dichiaro di aver letto l'informativa privacy e acconsento al trattamento 
+                        dei dati personali ai sensi degli articoli 13-14 del GDPR 2016/679
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Invia</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Galleria loghi -->
+    <main class="content">
+        <h2>I miei lavori</h2>
+        <div class="table-container">
+            <table class="centered-table">
+                <tr>
+                    <td>
+                        <img src="../Img/Loghi/100x100/1.png" class="card-img-top" alt="Progetto 1">
+                    </td>
+                    <td>
+                        <img src="../Img/Loghi/100x100/2.png" class="card-img-top" alt="Progetto 2">
+                    </td>
+                    <td>
+                        <img src="../Img/Loghi/100x100/3.png" class="card-img-top" alt="Progetto 3">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="../Img/Loghi/100x100/4.png" class="card-img-top" alt="Progetto 4">
+                    </td>
+                    <td>
+                        <img src="../Img/Loghi/100x100/5.png" class="card-img-top" alt="Progetto 5">
+                    </td>
+                    <td>
+                        <img src="../Img/Loghi/100x100/6.png" class="card-img-top" alt="Progetto 6">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Logo e nome studio -->
+            <div class="footer-brand">
+                <div class="footer-logo">MF STUDIO</div>
+                <p class="footer-tagline">Design & Creativity</p>
+            </div>
+            
+            <!-- Contatti -->
+            <div class="footer-contacts">
+                <h3 class="footer-heading">Contatti</h3>
+                <ul class="contact-list">
+                    <li class="contact-item">
+                        <span class="contact-label">Email:</span>
+                        <a href="mailto:hello@mfstudio.com" class="contact-link word-hover">hello@mfstudio.com</a>
+                    </li>
+                    <li class="contact-item">
+                        <span class="contact-label">Telefono:</span>
+                        <a href="tel:+390471202734" class="contact-link word-hover">+39 0471 202 734</a>
+                    </li>
+                    <li class="contact-item">
+                        <span class="contact-label">Mobile:</span>
+                        <a href="tel:+393755035401" class="contact-link word-hover">+39 375 503 5401</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Indirizzo studio -->
+            <div class="footer-address">
+                <h3 class="footer-heading">Studio</h3>
+                <address class="address-content">
+                    Via Rismo 94<br>
+                    39100 Bolzano-Bozen<br>
+                    Italy
+                </address>
+            </div>
+            
+            <!-- Link utili -->
+            <div class="footer-links">
+                <h3 class="footer-heading">Informazioni</h3>
+                <ul class="links-list">
+                    <li class="link-item">
+                        <a href="#" class="footer-link word-hover">PRIVACY POLICY</a>
+                    </li>
+                    <li class="link-item">
+                        <a href="#" class="footer-link word-hover">COOKIE POLICY</a>
+                    </li>
+                    <li class="link-item">
+                        <a href="#" class="footer-link word-hover">DIRITTI DEI LAVORI</a>
+                    </li>
+                    <li class="link-item">
+                        <a href="#" class="footer-link word-hover">LAVORA CON NOI</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Contattaci -->
+            <div class="footer-contact-form">
+                <h3 class="footer-heading">HAI QUALCHE DUBBIO?</h3>
+                <p class="contact-prompt">SCRIVICI</p>
+                <form class="footer-form" id="footer-contact-form">
+                    <div class="footer-form-group">
+                        <input type="email" placeholder="La tua email" required>
+                    </div>
+                    <div class="footer-form-group">
+                        <textarea placeholder="Il tuo messaggio..." rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="footer-submit-btn">Invia a info@mfstudio.com</button>
+                </form>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 MF STUDIO. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
